@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Grid System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        body{
+            color:#8f6f64;
+            font-weight: bold;
+            font-family: Arial;
+            text-align: center;
+        }
+        #content{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 2px;
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #content > *{
+            padding: 30px;
+        }
+
+        .nav{
+            grid-column: 1/2;
+            grid-row: 1/7;
+            background-color: #C78283;
+        }
+
+        .header{
+            grid-column: 2 / 12;
+            background-color: #F3D9DC;
+        }
+
+        .main{
+            grid-column: 2/12;
+            grid-row: 2 / 4;
+            background-color: #744253;
+        }
+        .col-1-3{
+            width: 33.33%;
+            float:left;
+        }
+        .col-2-3{
+            width: 33.33%;
+            float:left;
+        }
+        .col-3-3{
+            width: 33.33%;
+            float:left;
+        }
+
+        .images{
+            grid-column: 2/12;
+            grid-row: 4/6;
+            background-color: #744253;
+        }
+        .image1{
+            float: left;
+            position: relative;
+            width: 50%;
+            background-color: #744253;
+        }
+        .image2{
+            float: right;
+            width: 50%;
+            background-color: #744253;
+        }
+        img {
+            width: 48%;
+            height: 85%; 
+        }
+
+        .footer{
+            grid-column: 2/12;
+            background-color: #F3D9DC;
+        }
+
+    </style>
+
+    <body>
+        <div id="content">
+
+            <div class="nav">
+                <nav>Side Navbar</nav>
+            </div>
+            <div class="header">
+                <header>Header</header>
+            </div>
+
+            <div class="main">
+                <div>
+                    <div class="col-1-3">
+                        <p>Text</p>
+                    </div>
+                    <div class="col-2-3"> 
+                        <p>Text</p>  
+                    </div>
+                    <div class="col-3-3">
+                        <p>Text</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="images">
+                <div class="image1"> 
+                    <p>Doggo Images</p> 
+                    <img src="images/puppy1.jpg" />
+                </div>
+                <div class="image2">
+                    <p>Doggo Images</p>  
+                    <img src="images/puppy4.png" />
+                </div>
+            </div>
+                
+            <div class="footer">
+                <footer>Footer</footer>
+            </div>
+
+        </div>
+
+    </body>
+</html>
